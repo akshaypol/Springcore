@@ -12,23 +12,38 @@
     http://www.springframework.org/schema/util/spring-util.xsd
     ">
 
-	
-	
-	
-	<util:list list-class="java.util.linkedList" id="myFriendList">
+
+	<!-- stand alone list -->
+	<util:list list-class="java.util.ArrayList" id="myFriendList">
 		<value>Aman</value>
 		<value>Rman</value>
 		<value>Rohit</value>
+		<value>Rman</value>
 	</util:list>
+	<!-- stand alone map -->
+
+	<util:map map-class="java.util.TreeMap" id="feeMap">
+		<entry key="java" value="1000" />
+		<entry key="javar" value="1000" />
+		<entry key="c" value="3000" />
+		<entry key="paython" value="6000" />
+	</util:map>
+
+	<!-- stand alone properties -->
+
+	<util:properties id="Dbconfig">
+		<prop key="driver">Driver</prop>
+		<prop key="UserName">UserName</prop>
+		<prop key="Password">Password</prop>
+		<prop key="Url">Url</prop>
+	</util:properties>
+
 	<!-- com.springcore.standalone.collection -->
 	<bean class="com.springcore.standalone.collection.person"
 		name="person1">
-<!-- 		<property name="friends"> -->
-<!-- 		<ref bean="myFriendList"></ref> -->
-<!-- 		</property> -->
-
-		<property name="friends" ref="myFriendList"/>
-
+		<property name="friendsList" ref="myFriendList" />
+		<property name="fees" ref="feeMap" />
+		<property name="props" ref="Dbconfig" />
 	</bean>
 
 

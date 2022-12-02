@@ -16,7 +16,14 @@ public class app {
 
 	        
 	        System.out.println(s1);
+	        System.out.println(s1.getFriendsList().getClass().getName());
 	        
+	        System.out.println(s1.getFees());
+	        System.out.println(s1.getFees().getClass().getName());
+	        
+	        System.out.println("###################");
+	        System.out.println(s1.getProps());
+	        System.out.println(s1.getProps().getClass().getName());
 	}
 
 }

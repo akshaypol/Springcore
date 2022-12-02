@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    ">
+    
+<!--     //for enable all anotations -->
+    <context:annotation-config/>
+
+
+<!-- hey is init method in class and by is destory class in class -->
+
+<!-- <bean class="com.springcore.lifecycle.Samosa" name="s1" init-method="hey"  destroy-method="by"> -->
+
+
+<!-- <property name="price" value="12"/> -->
+<!-- </bean> -->
+
+<!-- init-method="initmethod"  destroy-method="destroymethod" -->
+
+<!-- <bean class="com.springcore.lifecycle.coke" name="s2" > -->
+
+
+<!-- <property name="price" value="50.05"/> -->
+<!-- </bean> -->
+
+
+
+<bean class="com.springcore.lifecycle.example" name="s3" >
+
+
+<property name="subject" value="math"/>
+</bean>
+
+<!-- enable only this tag for @PostConstruct @PreDestroy annotation  -->
+
+<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> -->
+
+</beans>
